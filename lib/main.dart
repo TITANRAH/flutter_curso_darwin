@@ -11,11 +11,17 @@ import 'widgets/scaffold.dart';
 import 'widgets/single_child_scroll_view.dart';
 import 'widgets/stack.dart';
 import 'widgets/text.dart';
-
+import 'package:device_preview/device_preview.dart';
 import 'widgets/my_images.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(
+    builder: (_) => const MyApp(),
+    // aqui puedo elegir si estara habilitado o no device preview en produccion 
+    // podriamos usar true o false pero la negacion de kReleaseMode hara ese trabajo
+    enabled: !kReleaseMode,
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -24,9 +30,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FacebookUi(),
+      useInheritedMediaQuery: true,
+      builder: DevicePreview.appBuilder,
+      locale: DevicePreview.locale(context),
+      home: const FacebookUi(),
     );
   }
 }

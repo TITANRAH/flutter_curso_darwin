@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:native_demo/facebook_ui/widgets/quick_actions.dart';
+import 'package:native_demo/facebook_ui/widgets/stories.dart';
 import './widgets/widgets.dart';
 
 class FacebookUi extends StatelessWidget {
@@ -54,14 +55,13 @@ class FacebookUi extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20,
-        ).copyWith(
-          top: 15,
-        ),
         children: const [
+          SizedBox(height: 10),
           WhatIsOnYourMind(),
+          SizedBox(height: 30),
           QuickAtentions(),
+          SizedBox(height: 30),
+          Stories(),
         ],
       ),
     );

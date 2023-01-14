@@ -15,12 +15,16 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   cached_network_image: ^3.2.3
+ 
   flutter_svg: ^1.1.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  device_preview: ^1.1.0
+  # cuando hay conflicto de dependeciencias y sub dependencias 
+  # es mejor escribir hasta los 2 puntos ,  device_preview: 
+  # y asi flutter instalara las subdependencias que necesite
   
   flutter_lints: ^2.0.1
 
