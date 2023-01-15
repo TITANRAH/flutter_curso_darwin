@@ -25,8 +25,11 @@ dev_dependencies:
   # cuando hay conflicto de dependeciencias y sub dependencias 
   # es mejor escribir hasta los 2 puntos ,  device_preview: 
   # y asi flutter instalara las subdependencias que necesite
-  
+  # faker genera datos ficticios
+  faker: ^2.1.0
   flutter_lints: ^2.0.1
+  # formatea tipo date a frases como hace un momento, hace unos dias etc
+  timeago: ^3.3.0
 
 flutter:
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:native_demo/facebook_ui/facebook_ui.dart';
+import 'package:native_demo/facebook_ui/widgets/aspect_ratio.dart';
 import 'widgets/column.dart';
 import 'widgets/container.dart';
 import 'widgets/my_icons.dart';
@@ -18,7 +19,7 @@ import 'package:flutter/foundation.dart';
 void main() {
   runApp(DevicePreview(
     builder: (_) => const MyApp(),
-    // aqui puedo elegir si estara habilitado o no device preview en produccion 
+    // aqui puedo elegir si estara habilitado o no device preview en produccion
     // podriamos usar true o false pero la negacion de kReleaseMode hara ese trabajo
     enabled: !kReleaseMode,
   ));
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Ubuntu'),
       debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,
       builder: DevicePreview.appBuilder,
