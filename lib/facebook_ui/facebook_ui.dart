@@ -54,6 +54,8 @@ class FacebookUi extends StatelessWidget {
           ),
         ],
       ),
+
+      // este list view es como usar un single scrol child view
       body: ListView(
         children: const [
           SizedBox(height: 10),
